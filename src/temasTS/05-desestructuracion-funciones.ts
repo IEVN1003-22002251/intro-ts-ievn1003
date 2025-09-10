@@ -1,6 +1,6 @@
 
 
-interface Producto{
+export interface Producto{
     nombre:string,
     precio:number,
 }
@@ -28,7 +28,7 @@ const isv=calcularISV(articulos)
 console.log('ISV:', isv);
 
 //Desestructuracion en funciones
-function calcularISV2(productos:Producto[]):[number,number]{
+export function calcularISV2(productos:Producto[]):[number,number]{
     let total=0;
     for(let producto of productos){
         total+=producto.precio
